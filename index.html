@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillborn Organic Coffee - Luxury Tanzania Safari & Experiences</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Hillborn</span>
+                <span class="logo-sub">ORGANIC COFFEE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#experiences" class="nav-link">Experiences</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#tours" class="nav-link">Tours</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#blog" class="nav-link">Stories</a></li>
+                <li><a href="#contact" class="nav-link cta-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background" style="background-image: url('assets/hero-kilimanjaro.jpg')">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Tanzania Like Never Before</h1>
+            <p class="hero-subtitle">Discover pristine wilderness, authentic culture, and the world's finest coffee on our luxury African journey</p>
+            
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="document.getElementById('booking-modal').style.display='block'">Plan Your Journey</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('experiences')">Explore Tours</button>
+            </div>
+
+            <div class="booking-preview">
+                <form class="quick-search" onsubmit="event.preventDefault(); handleQuickSearch()">
+                    <div class="search-group">
+                        <label>Destination</label>
+                        <select>
+                            <option>Kilimanjaro Trek</option>
+                            <option>Serengeti Safari</option>
+                            <option>Zanzibar Beach</option>
+                            <option>Coffee Experience</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label>Dates</label>
+                        <input type="text" placeholder="Select dates">
+                    </div>
+                    <div class="search-group">
+                        <label>Guests</label>
+                        <select>
+                            <option>1 Guest</option>
+                            <option>2 Guests</option>
+                            <option>3-4 Guests</option>
+                            <option>5+ Guests</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-search">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <svg class="scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Featured Experiences -->
+    <section class="experiences" id="experiences">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Signature Experiences</h2>
+                <p>Curated journeys through Tanzania's most extraordinary landscapes</p>
+            </div>
+
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <div class="experience-image" style="background-image: url('assets/kilimanjaro.jpg')"></div>
+                    <div class="experience-content">
+                        <h3>Kilimanjaro Summit Trek</h3>
+                        <p>Ascend Africa's highest peak on a guided luxury trek with premium accommodations and expert mountaineers.</p>
+                        <a href="#" class="experience-link">Discover</a>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image" style="background-image: url('assets/safari.jpg')"></div>
+                    <div class="experience-content">
+                        <h3>Safari Adventures</h3>
+                        <p>Witness the Great Migration and iconic wildlife in the Serengeti and Ngorongoro Crater from private luxury camps.</p>
+                        <a href="#" class="experience-link">Discover</a>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image" style="background-image: url('assets/zanzibar.jpg')"></div>
+                    <div class="experience-content">
+                        <h3>Zanzibar Beach Escape</h3>
+                        <p>Unwind on pristine beaches with turquoise waters, world-class resorts, and island cultural experiences.</p>
+                        <a href="#" class="experience-link">Discover</a>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image" style="background-image: url('assets/coffee-farm.jpg')"></div>
+                    <div class="experience-content">
+                        <h3>Organic Coffee Experience</h3>
+                        <p>Visit our heritage coffee farms, learn traditional cultivation methods, and taste the finest single-origin brews.</p>
+                        <a href="#" class="experience-link">Discover</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section class="story">
+        <div class="story-content">
+            <div class="story-text">
+                <h2>Our Story</h2>
+                <p>Founded on principles of authenticity and respect, Hillborn Organic Coffee represents more than just luxury travel. We are custodians of Tanzania's natural and cultural heritage, committed to sustainable tourism that benefits local communities.</p>
+                <p>Each journey we craft is an invitation to experience Africa not as a tourist, but as a privileged guest. From our family-owned coffee estates to exclusive partnerships with Maasai communities, every element is designed to create meaningful connections.</p>
+                <p>Our name reflects our commitment to sustainable agriculture—hillborn refers to the high-altitude regions where the world's finest coffee grows. We believe luxury and responsibility must coexist.</p>
+                <a href="#" class="btn btn-text">Learn More About Our Philosophy</a>
+            </div>
+            <div class="story-image" style="background-image: url('assets/story-image.jpg')"></div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Discover Our Destinations</h2>
+                <p>Explore Tanzania's most coveted locations</p>
+            </div>
+
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('assets/destination-kilimanjaro.jpg')">
+                        <div class="destination-overlay">
+                            <h3>Mount Kilimanjaro</h3>
+                            <p>5,895m • Africa's Highest Peak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('assets/destination-serengeti.jpg')">
+                        <div class="destination-overlay">
+                            <h3>Serengeti National Park</h3>
+                            <p>14,750 km² • Endless Plains</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('assets/destination-zanzibar.jpg')">
+                        <div class="destination-overlay">
+                            <h3>Zanzibar Island</h3>
+                            <p>Turquoise Waters • Stone Town</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('assets/destination-ngorongoro.jpg')">
+                        <div class="destination-overlay">
+                            <h3>Ngorongoro Crater</h3>
+                            <p>UNESCO Site • Wildlife Haven</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tours -->
+    <section class="featured-tours" id="tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Collections</h2>
+                <p>Hand-curated luxury experiences</p>
+            </div>
+
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('assets/tour-premium-kilimanjaro.jpg')"></div>
+                    <div class="tour-content">
+                        <span class="tour-badge">Premium</span>
+                        <h3>Kilimanjaro Summit: 8-Day Ascent</h3>
+                        <p>Experience Uhuru Peak with luxury mountain lodges, private guides, and acclimatization expertise. Includes pre and post-trek relaxation in Arusha.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-calendar"></i> 8 Days</span>
+                            <span class="tour-difficulty"><i class="fas fa-mountain"></i> Challenging</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $4,500</span>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('assets/tour-great-migration.jpg')"></div>
+                    <div class="tour-content">
+                        <span class="tour-badge">Seasonal</span>
+                        <h3>Great Migration Safari: 5-Day</h3>
+                        <p>Witness one of nature's greatest spectacles with expert naturalists. Private game drives, gourmet dining under stars, and exclusive lodge access.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-calendar"></i> 5 Days</span>
+                            <span class="tour-difficulty"><i class="fas fa-star"></i> Moderate</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $3,200</span>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('assets/tour-zanzibar-escape.jpg')"></div>
+                    <div class="tour-content">
+                        <span class="tour-badge">Relaxation</span>
+                        <h3>Zanzibar Paradise: 4-Day</h3>
+                        <p>Luxury beachfront resort with private pools, spa treatments, and cultural exploration of historic Stone Town. Perfect after-safari retreat.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-calendar"></i> 4 Days</span>
+                            <span class="tour-difficulty"><i class="fas fa-smile"></i> Easy</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $2,800</span>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-image" style="background-image: url('assets/tour-coffee-cultural.jpg')"></div>
+                    <div class="tour-content">
+                        <span class="tour-badge">Exclusive</span>
+                        <h3>Coffee & Culture: 6-Day</h3>
+                        <p>Immerse in authentic Tanzania through coffee farm stays, Maasai village visits, and culinary experiences with local chefs and coffee roasters.</p>
+                        <div class="tour-meta">
+                            <span class="tour-duration"><i class="fas fa-calendar"></i> 6 Days</span>
+                            <span class="tour-difficulty"><i class="fas fa-heart"></i> Authentic</span>
+                        </div>
+                        <div class="tour-footer">
+                            <span class="tour-price">From $2,200</span>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tours-cta">
+                <a href="#" class="btn btn-primary">View All Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Discerning Travelers</h2>
+                <p>Real experiences from our clients</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('assets/avatar-1.jpg')"></div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>New York, USA</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="stars">★★★★★</div>
+                        <p>"Hillborn transformed my understanding of luxury travel. The attention to detail, from private guides to gourmet meals in the wilderness, was extraordinary. This wasn't just a safari—it was a journey of self-discovery."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('assets/avatar-2.jpg')"></div>
+                        <div class="testimonial-info">
+                            <h4>James & Caroline</h4>
+                            <p>London, UK</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="stars">★★★★★</div>
+                        <p>"Our honeymoon was absolutely perfect. The combination of adventure and romance, coupled with the team's impeccable service, created memories we'll treasure forever. Highly recommend."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('assets/avatar-3.jpg')"></div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Marcus Chen</h4>
+                            <p>Singapore</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="stars">★★★★★</div>
+                        <p>"The coffee farm experience was eye-opening. Hillborn's commitment to sustainability and fair trade practices is evident in every interaction. This is luxury with a conscience."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background-image: url('assets/avatar-4.jpg')"></div>
+                        <div class="testimonial-info">
+                            <h4>Amelia Rodriguez</h4>
+                            <p>Madrid, Spain</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-body">
+                        <div class="stars">★★★★★</div>
+                        <p>"From booking to return home, every detail was handled with grace. The naturalists were knowledgeable, the camps were spectacular, and the food was outstanding. Worth every penny."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visual Stories</h2>
+                <p>Moments captured from our journeys</p>
+            </div>
+
+            <div class="masonry-gallery">
+                <div class="gallery-item gallery-item-tall">
+                    <img src="assets/gallery-1.jpg" alt="Kilimanjaro sunrise">
+                    <div class="gallery-overlay">
+                        <span>Kilimanjaro Sunrise</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/gallery-2.jpg" alt="Serengeti lion">
+                    <div class="gallery-overlay">
+                        <span>Serengeti Wildlife</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-wide">
+                    <img src="assets/gallery-3.jpg" alt="Safari landscape">
+                    <div class="gallery-overlay">
+                        <span>Endless Savannas</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/gallery-4.jpg" alt="Zanzibar beach">
+                    <div class="gallery-overlay">
+                        <span>Zanzibar Shores</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-tall">
+                    <img src="assets/gallery-5.jpg" alt="Coffee harvest">
+                    <div class="gallery-overlay">
+                        <span>Coffee Harvest</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/gallery-6.jpg" alt="Luxury camp">
+                    <div class="gallery-overlay">
+                        <span>Luxury Accommodations</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item gallery-item-wide">
+                    <img src="assets/gallery-7.jpg" alt="Maasai culture">
+                    <div class="gallery-overlay">
+                        <span>Cultural Connections</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/gallery-8.jpg" alt="Starry night">
+                    <div class="gallery-overlay">
+                        <span>African Nights</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stories & Insights</h2>
+                <p>Travel guides, cultural perspectives, and coffee knowledge</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('assets/blog-kilimanjaro-guide.jpg')"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Travel Guide</span>
+                        <h3>The Complete Kilimanjaro Trekking Guide</h3>
+                        <p>Everything you need to know about ascending Africa's highest peak: altitude challenges, route selection, physical preparation, and what to expect at each stage.</p>
+                        <div class="blog-meta">
+                            <span>5 min read</span>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('assets/blog-great-migration.jpg')"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Safari Stories</span>
+                        <h3>The Great Migration: Nature's Greatest Spectacle</h3>
+                        <p>Discover the remarkable journey of over two million wildebeest, zebras, and gazelles across the Serengeti and Masai Mara in this natural wonder.</p>
+                        <div class="blog-meta">
+                            <span>7 min read</span>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('assets/blog-coffee-culture.jpg')"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Coffee Culture</span>
+                        <h3>From Seed to Cup: The Art of Organic Coffee Farming</h3>
+                        <p>Explore the centuries-old traditions of coffee cultivation in Tanzania's highlands and how sustainable practices produce the world's finest single-origin beans.</p>
+                        <div class="blog-meta">
+                            <span>6 min read</span>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('assets/blog-zanzibar-culture.jpg')"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Cultural Insights</span>
+                        <h3>Zanzibar: Where Africa Meets the Indian Ocean</h3>
+                        <p>Uncover the rich history, vibrant markets, ancient Stone Town, and the cultural tapestry that makes Zanzibar one of the world's most enchanting islands.</p>
+                        <div class="blog-meta">
+                            <span>8 min read</span>
+                            <a href="#" class="read-more">Read Article →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-cta">
+                <a href="#" class="btn btn-primary">View All Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" style="background-image: url('assets/cta-background.jpg')">
+        <div class="final-cta-overlay"></div>
+        <div class="final-cta-content">
+            <h2>Start Your African Adventure Today</h2>
+            <p>Your journey to unforgettable experiences begins with a single step</p>
+            <button class="btn btn-light" onclick="document.getElementById('booking-modal').style.display='block'">Plan Your Journey Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Hillborn</h4>
+                <p>Luxury safari and cultural experiences across Tanzania, crafted for discerning travelers who seek authentic connections with nature and culture.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Experiences</a></li>
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Kilimanjaro</a></li>
+                    <li><a href="#">Serengeti</a></li>
+                    <li><a href="#">Zanzibar</a></li>
+                    <li><a href="#">Ngorongoro</a></li>
+                    <li><a href="#">Coffee Farms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><strong>Hillborn Organic Coffee</strong></p>
+                <p>Arusha, Tanzania</p>
+                <p>Phone: +255 (0) 27 250 8888</p>
+                <p>Email: hello@hillborn.tz</p>
+                <p><a href="#">WhatsApp: +255 755 123 456</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hillborn Organic Coffee. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('booking-modal').style.display='none'">&times;</span>
+            <h2>Begin Your Journey</h2>
+            <form class="booking-form" onsubmit="event.preventDefault(); handleBooking()">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="experience">Preferred Experience *</label>
+                        <select id="experience" required>
+                            <option value="">Select an experience</option>
+                            <option value="kilimanjaro">Kilimanjaro Trek</option>
+                            <option value="safari">Safari Adventure</option>
+                            <option value="zanzibar">Zanzibar Beach</option>
+                            <option value="coffee">Coffee Experience</option>
+                            <option value="combined">Combined Journey</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3-4 Guests</option>
+                            <option value="5">5+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-date">Preferred Start Date *</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Duration (Days) *</label>
+                        <select id="duration" required>
+                            <option value="">Select</option>
+                            <option value="3">3 Days</option>
+                            <option value="5">5 Days</option>
+                            <option value="7">7 Days</option>
+                            <option value="10">10 Days</option>
+                            <option value="14">14 Days</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests or Questions</label>
+                    <textarea id="message" rows="4" placeholder="Tell us about your interests, dietary needs, or any special requirements..."></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">I agree to be contacted regarding my inquiry and understand the privacy policy</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send My Inquiry</button>
+                <p class="form-note">A luxury travel specialist will reach out within 24 hours to customize your perfect journey.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
