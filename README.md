@@ -210,10 +210,10 @@ Connect to your backend API by modifying the `handleBooking()` function in `scri
 
 ## Contact Information (Update These)
 
-- **Email**: hello@hillborn.tz
-- **Phone**: +255 (0) 27 250 8888
-- **WhatsApp**: +255 755 123 456
-- **Location**: Arusha, Tanzania
+- **Email**: info@tanjinaakter.com
+- **Phone**: +880 1982-318831
+- **WhatsApp**: +880 1982-318831
+- **Location**: Bhola, Bangladesh
 
 ## Browser Support
 
@@ -251,7 +251,7 @@ Target metrics:
 
 ## License
 
-© 2026 Hillborn Organic Coffee. All rights reserved.
+© 2026. All rights reserved by Tanjina Akter
 
 ## Support
 
@@ -262,6 +262,6 @@ For technical questions or assistance with this website template:
 
 ---
 
-**Built with ❤️ for luxury travel experiences in Tanzania**
+**Built with ❤️ Tanjina Akter**
 
 *This website represents the pinnacle of luxury web design, crafted to inspire wanderlust and drive conversions for high-end travel experiences.*
